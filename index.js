@@ -1,4 +1,5 @@
 const anim_text_element = document.querySelector('.anim_text');
+const content = document.querySelector('.content');
 
 let anim_frames = get_typing_frames('KermitPurple');
 
@@ -17,8 +18,11 @@ function anim_text(){
         this.counter += 1;
     anim_text_element.innerHTML = anim_frames[this.counter];
     if(this.counter < anim_frames.length - 1)
-        setTimeout(anim_text, 150);
-    else
+        setTimeout(anim_text, 100);
+    else {
         delete this.counter;
+        anim_text_element.style.fontSize = '3rem';
+        content.style.opacity = '1';
+    }
 }
 anim_text();

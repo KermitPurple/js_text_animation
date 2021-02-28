@@ -1,4 +1,4 @@
-html, body{
+html, body, .box{
     width: 100%;
     height: 100%;
     margin: 0;
@@ -8,12 +8,35 @@ html, body{
 body{
     background: #bb89ec;
     color: #7756a8;
+}
+
+.box{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-flow: column;
 }
 
 .anim_text{
-    font-size: 7rem;
+    display: block;
+    width: 100%;
+    font-size: 9rem;
     font-family: consolas;
+    margin: 0;
+    padding: 0;
+    transition: font-size 0.3s ease;
+    text-align: center;
+}
+
+.content{
+    flex: 1 1 auto;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity: 0.4s ease;
+    margin: 10px;
+    padding: 10px;
+    background: #7756a8;
+    color: #220153;
+}
+
+.content p{
+    text-indent: 4rem;
 }
